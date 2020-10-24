@@ -188,7 +188,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
+                            <h1 class="m-b-20"><strong>Welcome To <br> Vr Collection</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
@@ -212,7 +212,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
-                            <h1 class="m-b-20"><strong>Welcome To <br> Thewayshop</strong></h1>
+                            <h1 class="m-b-20"><strong>Welcome To <br> Vr Collection</strong></h1>
                             <p class="m-b-40">See how your users experience your website in realtime or view <br> trends to see any changes in performance over time.</p>
                             <p><a class="btn hvr-hover" href="#">Shop New</a></p>
                         </div>
@@ -604,8 +604,8 @@
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2018 <a href="#">ThewayShop</a> Design By :
-            <a href="https://html.design/">html design</a></p>
+        <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vr Colecctiom</a> Design By :
+            <a href="https://html.design/">Vr Collection</a></p>
     </div>
     <!-- End copyright  -->
 
