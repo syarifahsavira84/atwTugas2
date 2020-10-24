@@ -38,3 +38,35 @@ Route::get('/kategori2', function () {
 Route::get('/promo2', function () {
     return view('promo2');
 });
+
+Route::get('/admin2', function () {
+    return view('layouts.admin2');
+ });
+
+Route::get('/beranda', function () {
+    return view('beranda');
+});
+
+Route::get('/produk', function () {
+    return view('produk');
+});
+
+Route::get('/kategori', function () {
+    return view('kategori');
+});
+
+Route::get('/promo', function () {
+    return view('promo');
+});
+
+Route::get('/pelanggan', function () {
+    return view('pelanggan');
+});
+
+Route::get('/pemasok', function () {
+    return view('pemasok');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
