@@ -52,7 +52,7 @@
                         <label class="custom-control-label" for="customCheck">Remember Me</label>
                       </div>
                     </div>
-                    <a href="{{url('layout2')}}" class="btn btn-primary btn-user btn-block">
+                    <a href="{{url('beranda2')}}" class="btn btn-primary btn-user btn-block">
                       Login
                     </a>
                   </form>

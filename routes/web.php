@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AuthController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,58 +18,32 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/layout2', function () {
-    return view('layouts.layout2');
- });
-
-Route::get('/login2', function () {
+Route::get('login2', function () {
     return view('login2');
 });
 
-Route::get('/beranda2', function () {
+Route::get('beranda2', function () {
     return view('beranda2');
 });
 
-Route::get('/produk2', function () {
+Route::get('produk2', function () {
     return view('produk2');
 });
 
-Route::get('/kategori2', function () {
+Route::get('kategori2', function () {
     return view('kategori2');
 });
 
-Route::get('/promo2', function () {
+Route::get('promo2', function () {
     return view('promo2');
 });
 
-Route::get('/admin2', function () {
-    return view('layouts.admin2');
- });
+Route::get('beranda', [HomeController::class, 'showBeranda'] );
+Route::get('produk', [HomeController::class, 'showProduk']);
+Route::get('kategori', [HomeController::class, 'showKategori']);
+Route::get('promo', [HomeController::class, 'showPromo']);
+Route::get('pelanggan', [HomeController::class, 'showPelanggan']);
+Route::get('pemasok', [HomeController::class, 'showPemasok']);
+Route::get('login', [AuthController::class, 'showLogin']);
 
-Route::get('/beranda', function () {
-    return view('beranda');
-});
 
-Route::get('/produk', function () {
-    return view('produk');
-});
-
-Route::get('/kategori', function () {
-    return view('kategori');
-});
-
-Route::get('/promo', function () {
-    return view('promo');
-});
-
-Route::get('/pelanggan', function () {
-    return view('pelanggan');
-});
-
-Route::get('/pemasok', function () {
-    return view('pemasok');
-});
-
-Route::get('/login', function () {
-    return view('login');
-});
