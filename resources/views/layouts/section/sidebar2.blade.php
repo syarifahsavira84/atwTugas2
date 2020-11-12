@@ -6,7 +6,7 @@
                       </a>
                     </li>
                     <li class="active ripple">
-                      <a href="{{url('produk')}}" class="nav-link"><span class="fa-home fa"></span> Produk 
+                      <a href="{{url('index')}}" class="nav-link"><span class="fa-home fa"></span> Produk 
                       </a>
                     </li>
                     <li class="active ripple">

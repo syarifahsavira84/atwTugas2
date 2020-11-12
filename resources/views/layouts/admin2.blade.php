@@ -81,9 +81,23 @@
                   </div>                    
                 </div>
 
-                <div class="col-md-12" style="padding:20px;">
-                  @yield('content')
-      		  </div>
+
+                <div class="main-container">
+                    <div class="content-wrapper">
+                        <div class="container">
+                            <div class="panel">
+                                <div class="panel-body">
+                                <div class="row">
+                                <div class="col-md-12">
+                                    @yield('content')
+                                </div>
+                             </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+                
+               
           <!-- end: content -->
 
     
@@ -99,11 +113,11 @@
 
        <!-- Start Footer  -->
 
-                <div>
+
 
             @include('layouts.section.footer2')
 
-            </div>
+
             <!-- End Footer  -->
 
     <!-- start: Javascript -->

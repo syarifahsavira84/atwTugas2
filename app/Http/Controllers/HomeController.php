@@ -15,16 +15,4 @@ class HomeController extends Controller {
 	function showKategori(){
 		return view('kategori');
 	}
-
-	function showPromo(){
-		return view('promo');
-	}
-
-	function showPelanggan(){
-		return view('pelanggan');
-	}
-
-	function showPemasok(){
-		return view('pemasok');
-	}
 }

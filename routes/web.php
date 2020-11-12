@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\ProdukController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,12 +39,11 @@ Route::get('promo2', function () {
     return view('promo2');
 });
 
-Route::get('beranda', [HomeController::class, 'showBeranda'] );
-Route::get('produk', [HomeController::class, 'showProduk']);
+Route::get('beranda', [HomeController::class, 'showBeranda']);
 Route::get('kategori', [HomeController::class, 'showKategori']);
-Route::get('promo', [HomeController::class, 'showPromo']);
-Route::get('pelanggan', [HomeController::class, 'showPelanggan']);
-Route::get('pemasok', [HomeController::class, 'showPemasok']);
+
 Route::get('login', [AuthController::class, 'showLogin']);
 
-
+Route::get('create', [ProdukController::class, 'create']);
+Route::get('index', [ProdukController::class, 'index']);
+Route::post('index', [ProdukController::class, 'store']);
