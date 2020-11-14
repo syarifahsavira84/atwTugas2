@@ -3,14 +3,14 @@
 @section('content')
 <div class="container">
 	<div class="row">
-		<div class="col-md-12">
+		<div class="col-md-11">
 			<div class="card">
 				<div class="card-header">
-					<h3>Tambah Data Produk</h3>
+					<h4>Tambah Data Produk</h4>
 				</div>
 				<hr>
 				<div class="card-body">
-					<form action="{{url('index')}}" method="post">
+					<form action="{{url('produk')}}" method="post">
 						@csrf
 						<div class="form-group" >
 							<label for="" class="control-label">Nama</label>
@@ -42,7 +42,7 @@
 								
 							</textarea>
 						</div>
-						<button class="btn btn-primary"><i class="fa fa-save"></i> Simpan</button>
+						<button class="btn btn-primary right"><i class="fa fa-save"></i> Simpan</button>
 					</form>
 				</div>
 			</div>
