@@ -24,16 +24,22 @@
               </ul>
 
               <ul class="nav navbar-nav navbar-right user-nav" >
-                <li class="user-name"><span>Syarifah Savira</span></li>
+                <li class="user-name">
+                   @if(Auth::check())
+                        <strong>{{request()->user()->nama}}</strong>
+                    @else
+                        Silahkan login
+                    @endif
+                </li>
                   <li class="dropdown avatar-dropdown">
-                   <img src="asset/img/avatar.jpg" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+                   <img src="{{ URL :: asset ('asset/img/avatar.jpg')}}" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
                    <ul class="dropdown-menu user-dropdown">
                      <li><a href="#"><span class="fa fa-user"></span> My Profile</a></li>
                      <li><a href="#"><span class="fa fa-cogs"></span> Setting</a></li>
                      <li role="separator" class="divider"></li>
                      <li class="more">
                       <ul>
-                        <li><a href="{{url('login')}}"><span class="fa fa-power-off "></span> Logout</a></li>
+                        <li><a href="{{url('logout')}}"><span class="fa fa-power-off "></span> Logout</a></li>
                       </ul>
                     </li>
                   </ul>

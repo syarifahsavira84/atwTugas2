@@ -9,7 +9,7 @@ use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\PemasokController;
 use App\Http\Controllers\Auth2Controller;
 use App\Http\Controllers\HomeClientController;
-
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,7 +27,8 @@ Route::get('/', function () {
 });
 
 Route::get('beranda', [HomeController::class, 'showBeranda']);
-Route::get('login', [AuthController::class, 'showLogin']);
+
+Route::get('test/{produk}/{hargaMin?}/{hargaMax?}', [HomeController::class, 'test']);
 
 Route::get('produk', [ProdukController::class, 'index']);
 Route::get('produk/create', [ProdukController::class, 'create']);
@@ -75,3 +76,14 @@ Route::get('produk2', [HomeClientController::class, 'showProduk2']);
 Route::get('kategori2', [HomeClientController::class, 'showKategori2']);
 Route::get('promo2', [HomeClientController::class, 'showPromo2']);
 
+Route::get('user', [UserController::class, 'index']);
+Route::get('user/create', [UserController::class, 'create']);
+Route::post('user', [UserController::class, 'store']);
+Route::get('user/{user}', [UserController::class, 'show']);
+Route::get('user/{user}/edit', [UserController::class, 'edit']);
+Route::put('user/{user}', [UserController::class, 'update']);
+Route::delete('user/{user}', [UserController::class, 'destroy']);
+
+Route::get('login', [AuthController::class, 'showLogin']);
+Route::post('login', [AuthController::class, 'loginProcess']);
+Route::get('logout', [AuthController::class, 'logout']);
