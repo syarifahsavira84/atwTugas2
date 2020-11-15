@@ -1,5 +1,6 @@
 <?php 
 
+
 namespace App\Http\Controllers;
 
 class Auth2Controller extends Controller

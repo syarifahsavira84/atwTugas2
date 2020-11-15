@@ -1,3 +1,4 @@
+
 @extends('layouts.admin2')
 
 @section('content')
@@ -13,7 +14,7 @@
 					<h3>{{$pelanggan->nama}}</h3>
 					<hr>
 					<p>
-						Jenis Kelamin : {{$pelanggan->jenis_kelamin)}} |
+						Jenis Kelamin : {{$pelanggan->jenis_kelamin}} |
 						Alamat : {{$pelanggan->alamat}} 
 					</p>
 				</div>
@@ -23,3 +24,4 @@
 </div>
 
 @endsection
+

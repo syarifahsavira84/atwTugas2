@@ -1,3 +1,4 @@
+
 @extends('layouts.admin2')
 
 @section('content')
@@ -13,8 +14,8 @@
 					<h3>{{$pemasok->nama}}</h3>
 					<hr>
 					<p>
-						Jenis Kelamin : {{$pemasok->jenis_kelamin)}} |
-						Alamat : {{$pemasok->alamat}} 
+						Jenis Kelamin : {{$pemasok->jenis_kelamin}} |
+						Alamat : {{$pemasok->alamat}}
 					</p>
 				</div>
 			</div>
