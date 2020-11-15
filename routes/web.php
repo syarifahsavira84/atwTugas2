@@ -38,6 +38,7 @@ Route::get('produk/{produk}/edit', [ProdukController::class, 'edit']);
 Route::put('produk/{produk}', [ProdukController::class, 'update']);
 Route::delete('produk/{produk}', [ProdukController::class, 'destroy']);
 
+
 Route::get('kategori', [KategoriController::class, 'index']);
 Route::get('kategori/create', [KategoriController::class, 'create']);
 Route::post('kategori', [KategoriController::class, 'store']);
