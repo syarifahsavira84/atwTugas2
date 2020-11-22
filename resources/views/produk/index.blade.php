@@ -5,13 +5,49 @@
 
 <div class="container">
 	<div class="row">
-		<div class="col-md-11">
+		<div class="col-md-11 mt-5">
 			<div class="card">
 				<div class="card-header">
-					<h4>Data Produk</h4>
-					<a href="{{url('produk/create')}}" class="btn btn-primary right"><i class="fa fa-plus"></i>Tambah Data</a>
+					<strong>Filter</strong>
 				</div>
-				<br><br><br>
+				<dir class="card-body">
+					<form action="{{url('admin/produk/filter')}}" method="post">
+						@csrf
+						<div class="form-group">
+							<label for="" class="control-label">Nama</label>
+							<input type="text" name="nama" class="form-control" value="{{$nama ?? ""}}">
+						</div>
+						<div class="form-group">
+							<label for="" class="control-label">Stock</label>
+							<input type="text" name="stock" class="form-control" value="{{$stock ?? ""}}">
+						</div>
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="" class="control-label">Harga Min</label>
+									<input type="text" name="harga_min" class="form-control" value="{{$harga_min ?? ""}}">
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label for="" class="control-label">Harga Max</label>
+									<input type="text" name="harga_max" class="form-control" value="{{$harga_max ?? ""}}">
+								</div>
+							</div>
+						</div>
+						<button class="btn btn-primary right"><i class="fa fa-search"></i> Filter</button>
+					</form>
+				</dir>
+			</div>
+			<br>
+			<hr>
+			<div class="card">
+				<div class="card-header">
+					<strong>Data Produk</strong>
+					<a href="{{url('admin/produk/create')}}" class="btn btn-primary right"><i class="fa fa-plus"></i> Tambah Data</a>
+				</div>
+				<hr>
+				<br>
 				<div class="card-body">
 					<table class="table">
 						<thead>
@@ -29,13 +65,13 @@
 								<td>{{$produk->harga}}</td>
 								<td>{{$produk->stock}}</td>
 								<td width="20px">
-										<a href="{{url('produk', $produk->id)}}" class="btn btn-sm btn-info"><i class="fa fa-info"></i></a>
+										<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-sm btn-info"><i class="fa fa-info"></i></a>
 								</td>
 								<td width="20px">
-										<a href="{{url('produk', $produk->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+										<a href="{{url('admin/produk', $produk->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
 								</td>
 								<td width="20px">
-										@include('layouts.utils.delete',['url'=>url('produk', $produk->id)])
+										@include('layouts.utils.delete',['url'=>url('admin/produk', $produk->id)])
 								</td>
 							</tr>
 							@endforeach

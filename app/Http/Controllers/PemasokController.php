@@ -19,7 +19,7 @@ class PemasokController extends Controller{
 		$pemasok->alamat = request('alamat');
 		$pemasok->save();
 
-		return redirect('pemasok')->with('success', 'Data berhasil ditambah');
+		return redirect('admin/pemasok')->with('success', 'Data berhasil ditambah');
 	}
 	function show(Pemasok $pemasok){
 		$data['pemasok'] = $pemasok;
@@ -35,11 +35,18 @@ class PemasokController extends Controller{
 		$pemasok->alamat = request('alamat');
 		$pemasok->save();
 
-		return redirect('pemasok')->with('success', 'Data berhasil diedit');
+		return redirect('admin/pemasok')->with('success', 'Data berhasil diedit');
 	}
 	function destroy(Pemasok $pemasok){
 		$pemasok->delete();
 
-		return redirect('pemasok')->with('danger', 'Data berhasil dihapus');
+		return redirect('admin/pemasok')->with('danger', 'Data berhasil dihapus');
+	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_pemasok'] = Pemasok::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('pemasok.index', $data);
+		
 	}
 }

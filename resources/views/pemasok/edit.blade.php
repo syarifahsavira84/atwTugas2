@@ -11,7 +11,7 @@
 				</div>
 				<hr>
 				<div class="card-body">
-					<form action="{{url('pemasok',$pemasok->id)}}" method="post">
+					<form action="{{url('admin/pemasok',$pemasok->id)}}" method="post">
 						@csrf
 						@method("PUT")
 						<div class="form-group" >

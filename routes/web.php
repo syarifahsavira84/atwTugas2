@@ -27,28 +27,38 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('layout2', function () {
+    return view('layouts/layout2');
+});
+
 Route::get('beranda', [HomeController::class, 'showBeranda']);
+
 
 Route::get('test/{produk}/{hargaMin?}/{hargaMax?}', [HomeController::class, 'test']);
 
-Route::resource('produk', 'ProdukController');
+Route::prefix('admin')->middleware('auth')->group(function(){
+	Route::post('produk/filter', [ProdukController::class, 'filter']);
+	Route::post('kategori/filter', [KategoriController::class, 'filter']);
+	Route::post('pelanggan/filter', [PelangganController::class, 'filter']);
+	Route::post('pemasok/filter', [PemasokController::class, 'filter']);
+	Route::post('promo/filter', [PromoController::class, 'filter']);
+	Route::post('user/filter', [UserController::class, 'filter']);
+	Route::resource('produk', 'ProdukController');
+	Route::resource('kategori', 'KategoriController');
+	Route::resource('promo', 'PromoController');
+	Route::resource('pelanggan', 'PelangganController');
+	Route::resource('pemasok', 'PemasokController');
+	Route::resource('user', 'UserController');
+});
 
-Route::resource('kategori', 'KategoriController');
 
-Route::resource('promo', 'PromoController');
-
-Route::resource('pelanggan', 'PelangganController');
-
-Route::resource('pemasok', 'PemasokController');
-
-Route::resource('user', 'UserController');
 
 Route::get('beranda2', [HomeClientController::class, 'showBeranda2']);
 Route::get('login2', [Auth2Controller::class, 'showLogin2']);
-Route::get('produk2', [HomeClientController::class, 'showProduk2']);
+
 Route::get('kategori2', [HomeClientController::class, 'showKategori2']);
 Route::get('promo2', [HomeClientController::class, 'showPromo2']);
-
-Route::get('login', [AuthController::class, 'showLogin']);
+Route::get('produk2', [HomeClientController::class, 'showProduk2']);
+Route::get('login', [AuthController::class, 'showLogin'])->name('login');
 Route::post('login', [AuthController::class, 'loginProcess']);
 Route::get('logout', [AuthController::class, 'logout']);

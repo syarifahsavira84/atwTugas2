@@ -76,10 +76,10 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="custom-select-box">
                         <select id="basic" class="selectpicker show-tick form-control" data-placeholder="$ USD">
-						<option>¥ JPY</option>
-						<option>$ USD</option>
-						<option>€ EUR</option>
-					</select>
+                        <option>¥ JPY</option>
+                        <option>$ USD</option>
+                        <option>€ EUR</option>
+                    </select>
                     </div>
                     <div class="right-phone-box">
                         <p>Call US :- <a href="#"> +11 900 800 100</a></p>
@@ -128,7 +128,7 @@
                     <ul>
                         <li class="search"><a href="#"><i class="fa fa-search"></i></a></li>
                         <li class="side-menu"><a href="#">
-						<i class="fa fa-shopping-bag"></i>
+                        <i class="fa fa-shopping-bag"></i>
                             <span class="badge">3</span></a></li>
                     <li class="nav-item active"><a class="nav-link" href="{{url('login2')}}">Logout</a></li>
                     </ul>
@@ -553,7 +553,7 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-12 col-sm-12">
                         <div class="footer-widget">
-                            <h4>About Vr Collection</h4>
+                            <h4>About ThewayShop</h4>
                             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
                                 </p>
                             <ul>
@@ -604,7 +604,7 @@
 
     <!-- Start copyright  -->
     <div class="footer-copyright">
-        <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vr Collection</a> Design By :
+        <p class="footer-company">All Rights Reserved. &copy; 2020 <a href="#">Vr Colecctiom</a> Design By :
             <a href="https://html.design/">Vr Collection</a></p>
     </div>
     <!-- End copyright  -->

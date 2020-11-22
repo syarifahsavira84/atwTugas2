@@ -11,7 +11,7 @@
 				</div>
 				<hr>
 				<div class="card-body">
-					<form action="{{url('promo',$promo->id)}}" method="post">
+					<form action="{{url('admin/promo',$promo->id)}}" method="post">
 						@csrf
 						@method("PUT")
 						<div class="form-group" >

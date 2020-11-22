@@ -19,7 +19,7 @@ class PelangganController extends Controller{
 		$pelanggan->alamat = request('alamat');
 		$pelanggan->save();
 
-		return redirect('pelanggan')->with('success', 'Data berhasil ditambah');
+		return redirect('admin/pelanggan')->with('success', 'Data berhasil ditambah');
 	}
 	function show(Pelanggan $pelanggan){
 		$data['pelanggan'] = $pelanggan;
@@ -35,11 +35,18 @@ class PelangganController extends Controller{
 		$pelanggan->alamat = request('alamat');
 		$pelanggan->save();
 
-		return redirect('pelanggan')->with('success', 'Data berhasil diedit');
+		return redirect('admin/pelanggan')->with('success', 'Data berhasil diedit');
 	}
 	function destroy(Pelanggan $pelanggan){
 		$pelanggan->delete();
 
-		return redirect('pelanggan')->with('danger', 'Data berhasil dihapus');
+		return redirect('admin/pelanggan')->with('danger', 'Data berhasil dihapus');
+	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_pelanggan'] = Pelanggan::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('pelanggan.index', $data);
+		
 	}
 }

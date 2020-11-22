@@ -190,16 +190,47 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Kategori Detail</h2>
+                    <h2>Produk Detail</h2>
                     <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="#">Kategori</a></li>
-                        <li class="breadcrumb-item active">Kategori Detail </li>
+                        <li class="breadcrumb-item"><a href="#">Produk</a></li>
+                        <li class="breadcrumb-item active">Produk Detail </li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- End All Title Box -->
+
+
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+                <div class="card">
+                <div class="card-header">
+                    <strong>Filter</strong>
+                </div>
+                <dir class="card-body">
+                    <form action="{{url('produk2/filter')}}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label for="" class="control-label">Nama Produk</label>
+                            <input type="text" name="nama" class="form-control" value="{{$nama ?? ""}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label">Harga</label>
+                            <input type="text" name="harga" class="form-control" value="{{$harga ?? ""}}">
+                        </div>
+                        <button class="btn btn-primary float-right"><i class="fa fa-search"></i> Filter</button>
+                    </form>
+                </dir>
+            </div>
+            <br>
+            </div>
+        </div>
+    </div>
+
+</div>
 
     <!-- Start Shop Detail  -->
     <div class="shop-detail-box-main">
@@ -235,13 +266,12 @@
                 </div>
                 <div class="col-xl-7 col-lg-7 col-md-6">
                     <div class="single-product-details">
-                        <h2>Fachion Lorem ipsum dolor sit amet</h2>
-                        <h5> <del>$ 60.00</del> $40.79</h5>
+                        <h2>Baju Acara Wanita</h2>
+                        <h5> <del>Rp. 260000</del>Rp. 230000 </h5>
                         <p class="available-stock"><span> More than 20 available / <a href="#">8 sold </a></span>
                             <p>
                                 <h4>Short Description:</h4>
-                                <p>Nam sagittis a augue eget scelerisque. Nullam lacinia consectetur sagittis. Nam sed neque id eros fermentum dignissim quis at tortor. Nullam ultricies urna quis sem sagittis pharetra. Nam erat turpis, cursus in ipsum at,
-                                    tempor imperdiet metus. In interdum id nulla tristique accumsan. Ut semper in quam nec pretium. Donec egestas finibus suscipit. Curabitur tincidunt convallis arcu. </p>
+                                <p>Baju Acara berbahan kulit sintetis yang di pakai akan terasa sejuk dan memberi kenyamanan kepada pemakainya.</p>
                                 <ul>
                                     <li>
                                         <div class="form-group size-st">
@@ -293,8 +323,8 @@
             <div class="row my-5">
                 <div class="col-lg-12">
                     <div class="title-all text-center">
-                        <h1>Featured Products</h1>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet lacus enim.</p>
+                        <h1>Gambaran Produk</h1>
+                        <p>Jenis Produk yang tersedia</p>
                     </div>
                     <div class="featured-products-box owl-carousel owl-theme">
                         <div class="item">
@@ -311,12 +341,12 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Jaket Kulit</h4>
+                                    <h5> Rp. 300000</h5>
                                 </div>
                             </div>
                         </div>
-                        <div class="item">
+                        <div class="item" id="baju_w">
                             <div class="products-single fix">
                                 <div class="box-img-hover">
                                     <img src="images/img-pro-02.jpg" class="img-fluid" alt="Image">
@@ -330,8 +360,8 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Baju Wanita</h4>
+                                    <h5>Rp. 100000</h5>
                                 </div>
                             </div>
                         </div>
@@ -349,8 +379,8 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Tas Kulit</h4>
+                                    <h5>Rp. 250000</h5>
                                 </div>
                             </div>
                         </div>
@@ -368,8 +398,8 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Jam Tangan</h4>
+                                    <h5>Rp. 150000</h5>
                                 </div>
                             </div>
                         </div>
@@ -387,8 +417,8 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Jaket Kulit</h4>
+                                    <h5>Rp. 300000</h5>
                                 </div>
                             </div>
                         </div>
@@ -406,8 +436,8 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Baju Wanita</h4>
+                                    <h5>Rp. 100000</h5>
                                 </div>
                             </div>
                         </div>
@@ -425,8 +455,8 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Tas Kulit</h4>
+                                    <h5>Rp. 250000</h5>
                                 </div>
                             </div>
                         </div>
@@ -444,8 +474,8 @@
                                     </div>
                                 </div>
                                 <div class="why-text">
-                                    <h4>Lorem ipsum dolor sit amet</h4>
-                                    <h5> $9.79</h5>
+                                    <h4>Jam Tangan</h4>
+                                    <h5>Rp. 150000</h5>
                                 </div>
                             </div>
                         </div>

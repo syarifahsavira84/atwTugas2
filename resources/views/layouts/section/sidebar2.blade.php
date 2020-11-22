@@ -18,19 +18,19 @@
                       </a>
                     </li>
                     <li class="active ripple">
-                      <a href="{{url('produk')}}" class="nav-link"><span class="fa-home fa"></span> Produk 
+                      <a href="{{url('admin/produk')}}" class="nav-link"><span class="fa-home fa"></span> Produk 
                       </a>
                     </li>
                     <li class="active ripple">
-                      <a href="{{url('kategori')}}" class="nav-link"><span class="fa-home fa"></span> Kategori 
+                      <a href="{{url('admin/kategori')}}" class="nav-link"><span class="fa-home fa"></span> Kategori 
                       </a>
                     </li>
                     <li class="active ripple">
-                      <a href="{{url('promo')}}" class="nav-link"><span class="fa-home fa"></span> Promo 
+                      <a href="{{url('admin/promo')}}" class="nav-link"><span class="fa-home fa"></span> Promo 
                       </a>
                     </li>
                     <li class="active ripple">
-                      <a href="{{url('user')}}" class="nav-link"><span class="fa-home fa"></span> User 
+                      <a href="{{url('admin/user')}}" class="nav-link"><span class="fa-home fa"></span> User 
                       </a>
                     </li>
                     <li class="ripple">
@@ -39,8 +39,8 @@
                         <span class="fa-angle-right fa right-arrow text-right"></span>
                       </a>
                       <ul class="nav nav-list tree">
-                        <li><a href="{{url('pelanggan')}}">Pelanggan</a></li>
-                        <li><a href="{{url('pemasok')}}">Pemasok</a></li>
+                        <li><a href="{{url('admin/pelanggan')}}">Pelanggan</a></li>
+                        <li><a href="{{url('admin/pemasok')}}">Pemasok</a></li>
                       </ul>
                     </li>
                   </ul>

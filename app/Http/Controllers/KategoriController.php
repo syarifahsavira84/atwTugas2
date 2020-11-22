@@ -19,7 +19,7 @@ class KategoriController extends Controller{
 		$kategori->stock = request('stock');
 		$kategori->save();
 
-		return redirect('kategori')->with('success', 'Data berhasil ditambah');
+		return redirect('admin/kategori')->with('success', 'Data berhasil ditambah');
 	}
 	function show(Kategori $kategori){
 		$data['kategori'] = $kategori;
@@ -35,11 +35,18 @@ class KategoriController extends Controller{
 		$kategori->stock = request('stock');
 		$kategori->save();
 
-		return redirect('kategori')->with('success', 'Data berhasil diedit');
+		return redirect('admin/kategori')->with('success', 'Data berhasil diedit');
 	}
 	function destroy(Kategori $kategori){
 		$kategori->delete();
 
-		return redirect('kategori')->with('danger', 'Data berhasil dihapus');
+		return redirect('admin/kategori')->with('danger', 'Data berhasil dihapus');
+	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_kategori'] = Kategori::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('kategori.index', $data);
+		
 	}
 }

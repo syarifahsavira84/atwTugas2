@@ -6,10 +6,27 @@
 <div class="container">
 	<div class="row">
 		<div class="col-md-11">
+		<div class="card">
+			<div class="card-header">
+					<strong>Filter</strong>
+				</div>
+				<dir class="card-body">
+					<form action="{{url('admin/kategori/filter')}}" method="post">
+						@csrf
+						<div class="form-group">
+							<label for="" class="control-label">Nama</label>
+							<input type="text" name="nama" class="form-control" value="{{$nama ?? ""}}">
+						</div>
+						<button class="btn btn-primary right"><i class="fa fa-search"></i> Filter</button>
+					</form>
+				</dir>
+			</div>
+			<br>
+			<hr>
 			<div class="card">
 				<div class="card-header">
 					<h4>Data Kategori</h4>
-					<a href="{{url('kategori/create')}}" class="btn btn-primary right"><i class="fa fa-plus"></i>Tambah Data</a>
+					<a href="{{url('admin/kategori/create')}}" class="btn btn-primary right"><i class="fa fa-plus"></i>Tambah Data</a>
 				</div>
 				<br><br><br>
 				<div class="card-body">
@@ -29,13 +46,13 @@
 								<td>{{$kategori->brand}}</td>
 								<td>{{$kategori->stock}}</td>
 								<td width="20px">
-										<a href="{{url('kategori', $kategori->id)}}" class="btn btn-sm btn-info"><i class="fa fa-info"></i></a>
+										<a href="{{url('admin/kategori', $kategori->id)}}" class="btn btn-sm btn-info"><i class="fa fa-info"></i></a>
 								</td>
 								<td width="20px">
-										<a href="{{url('kategori', $kategori->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+										<a href="{{url('admin/kategori', $kategori->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
 								</td>
 								<td width="20px">
-										@include('layouts.utils.delete',['url'=>url('kategori', $kategori->id)])
+										@include('layouts.utils.delete',['url'=>url('admin/kategori', $kategori->id)])
 									</div>
 								</td>
 							</tr>

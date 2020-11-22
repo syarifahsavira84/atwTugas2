@@ -11,7 +11,7 @@
 				</div>
 				<hr>
 				<div class="card-body">
-					<form action="{{url('user',$user->id)}}" method="post">
+					<form action="{{url('admin/user',$user->id)}}" method="post">
 						@csrf
 						@method("put")
 						<div class="form-group" >
@@ -29,6 +29,10 @@
 						<div class="form-group" >
 							<label for="" class="control-label">Password</label>
 							<input type="text" class="form-control" name="password"></input>
+						</div>
+						<div class="form-group" >
+							<label for="" class="control-label">No HP</label>
+							<input type="text" class="form-control" name="no_handphone"></input>
 						</div>
 						<button class="btn btn-primary right"><i class="fa fa-save"></i> Simpan</button>
 					</form>

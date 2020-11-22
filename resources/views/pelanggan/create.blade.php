@@ -11,7 +11,7 @@
 				</div>
 				<hr>
 				<div class="card-body">
-					<form action="{{url('pelanggan')}}" method="post">
+					<form action="{{url('admin/pelanggan')}}" method="post">
 						@csrf
 						<div class="form-group" >
 							<label for="" class="control-label">Nama</label>

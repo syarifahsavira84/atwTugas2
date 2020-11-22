@@ -185,16 +185,45 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h2>Produk</h2>
+                    <h2>Kategori</h2>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Beranda</a></li>
-                        <li class="breadcrumb-item active">Produk</li>
+                        <li class="breadcrumb-item active">Kategori</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
     <!-- End All Title Box -->
+
+
+     <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-3 col-lg-3 col-sm-12 col-xs-12 sidebar-shop-left">
+                <div class="card">
+                <div class="card-header">
+                    <strong>Filter</strong>
+                </div>
+                <dir class="card-body">
+                    <form action="{{url('kategori2/filter')}}" method="post">
+                        @csrf
+                        <div class="form-group">
+                            <label for="" class="control-label">Jenis</label>
+                            <input type="text" name="nama" class="form-control" value="{{$nama ?? ""}}">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="control-label">Harga</label>
+                            <input type="text" name="harga" class="form-control" value="{{$harga ?? ""}}">
+                        </div>
+                        <button class="btn btn-primary float-right"><i class="fa fa-search"></i> Filter</button>
+                    </form>
+                </dir>
+            </div>
+            <br>
+            </div>
+        </div>
+    </div>
 
     <!-- Start Shop Page  -->
     <div class="shop-box-inner">

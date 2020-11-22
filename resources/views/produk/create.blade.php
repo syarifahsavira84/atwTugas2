@@ -1,4 +1,3 @@
-
 @extends('layouts.admin2')
 
 @section('content')
@@ -11,7 +10,7 @@
 				</div>
 				<hr>
 				<div class="card-body">
-					<form action="{{url('produk')}}" method="post">
+					<form action="{{url('admin/produk')}}" method="post">
 						@csrf
 						<div class="form-group" >
 							<label for="" class="control-label">Nama</label>

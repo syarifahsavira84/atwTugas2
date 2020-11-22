@@ -19,7 +19,7 @@ class PromoController extends Controller{
 		$promo->diskon = request('diskon');
 		$promo->save();
 
-		return redirect('promo')->with('success', 'Data berhasil ditambah');
+		return redirect('admin/promo')->with('success', 'Data berhasil ditambah');
 	}
 	function show(Promo $promo){
 		$data['promo'] = $promo;
@@ -35,11 +35,18 @@ class PromoController extends Controller{
 		$promo->diskon = request('diskon');
 		$promo->save();
 
-		return redirect('promo')->with('success', 'Data berhasil diedit');
+		return redirect('admin/promo')->with('success', 'Data berhasil diedit');
 	}
 	function destroy(Promo $promo){
 		$promo->delete();
 
-		return redirect('promo')->with('danger', 'Data berhasil dihapus');
+		return redirect('admin/promo')->with('danger', 'Data berhasil dihapus');
+	}
+	function filter(){
+		$nama = request('nama');
+		$data['list_promo'] = Promo::where('nama', 'like', "%$nama%")->get();
+		$data['nama'] = $nama;
+		return view('promo.index', $data);
+		
 	}
 }

@@ -7,9 +7,26 @@
 	<div class="row">
 		<div class="col-md-11">
 			<div class="card">
+			<div class="card-header">
+					<strong>Filter</strong>
+				</div>
+				<dir class="card-body">
+					<form action="{{url('admin/pelanggan/filter')}}" method="post">
+						@csrf
+						<div class="form-group">
+							<label for="" class="control-label">Nama</label>
+							<input type="text" name="nama" class="form-control" value="{{$nama ?? ""}}">
+						</div>
+						<button class="btn btn-primary right"><i class="fa fa-search"></i> Filter</button>
+					</form>
+				</dir>
+			</div>
+			<br>
+			<hr>
+			<div class="card">
 				<div class="card-header">
 					<h4>Data Produk</h4>
-					<a href="{{url('pelanggan/create')}}" class="btn btn-primary right"><i class="fa fa-plus"></i>Tambah Data</a>
+					<a href="{{url('admin/pelanggan/create')}}" class="btn btn-primary right"><i class="fa fa-plus"></i>Tambah Data</a>
 				</div>
 				<br><br><br>
 				<div class="card-body">
@@ -29,13 +46,13 @@
 								<td>{{$pelanggan->jenis_kelamin}}</td>
 								<td>{{$pelanggan->alamat}}</td>
 								<td width="20px">
-										<a href="{{url('pelanggan', $pelanggan->id)}}" class="btn btn-sm btn-info"><i class="fa fa-info"></i></a>
+										<a href="{{url('admin/pelanggan', $pelanggan->id)}}" class="btn btn-sm btn-info"><i class="fa fa-info"></i></a>
 								</td>
 								<td width="20px">
-										<a href="{{url('pelanggan', $pelanggan->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
+										<a href="{{url('admin/pelanggan', $pelanggan->id)}}/edit" class="btn btn-sm btn-warning"><i class="fa fa-edit"></i></a>
 								</td>
 								<td width="20px">
-										@include('layouts.utils.delete',['url'=>url('pelanggan', $pelanggan->id)])
+										@include('layouts.utils.delete',['url'=>url('admin/pelanggan', $pelanggan->id)])
 								</td>
 							</tr>
 							@endforeach

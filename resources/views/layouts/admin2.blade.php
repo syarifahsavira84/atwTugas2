@@ -45,7 +45,7 @@
       <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/js/plugins/jquery.vmap.sampledata.js')}}"/>
       <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/js/plugins/chart.min.js')}}"/>
       <link rel="stylesheet" type="text/css" href="{{URL::asset('asset/js/main.js')}}"/>
-	<link href="{{URL::asset('asset/css/style.css" rel="stylesheet')}}">
+	<link href="{{URL::asset('asset/css/style.css')}}" rel="stylesheet')}}">
 	<!-- end: Css -->
 
 	<link rel="shortcut icon" href="{{URL::asset('asset/img/logomi.png')}}">
