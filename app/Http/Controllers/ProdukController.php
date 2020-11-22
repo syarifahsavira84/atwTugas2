@@ -21,6 +21,7 @@ class ProdukController extends Controller{
 		$produk->nama = request('nama');
 		$produk->harga = request('harga');
 		$produk->berat = request('berat');
+		$produk->size = request('size');
 		$produk->stock = request('stock');
 		$produk->deskripsi = request('deskripsi');
 		$produk->save();
@@ -39,6 +40,7 @@ class ProdukController extends Controller{
 		$produk->nama = request('nama');
 		$produk->harga = request('harga');
 		$produk->berat = request('berat');
+		$produk->size = request('size');
 		$produk->stock = request('stock');
 		$produk->deskripsi = request('deskripsi');
 		$produk->save();

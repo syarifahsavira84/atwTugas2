@@ -115,7 +115,7 @@
                 <div class="collapse navbar-collapse" id="navbar-menu">
                     <ul class="nav navbar-nav ml-auto" data-in="fadeInDown" data-out="fadeOutUp">
                         <li class="nav-item active"><a class="nav-link" href="{{url('beranda2')}}">Beranda</a></li>
-                        <li class="nav-item"><a class="nav-link" href="{{url('produk2')}}">Produk</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{url('client')}}">Produk</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('kategori2')}}">Kategori</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{url('promo2')}}">Promo</a></li>
                         

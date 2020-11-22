@@ -54,6 +54,7 @@
 							<th width="50px" bgcolor="black">No</th>
 							<th  bgcolor="black">Nama Produk</th>
 							<th width="200px" bgcolor="black">Harga</th>
+							<th width="200px" bgcolor="black">Size</th>
 							<th width="200px" bgcolor="black">Stock</th>
 							<th  colspan="3" bgcolor="black">Aksi</th>
 						</thead>
@@ -63,6 +64,7 @@
 								<td>{{$loop->iteration}}</td>
 								<td>{{$produk->nama}}</td>
 								<td>{{$produk->harga}}</td>
+								<td>{{$produk->size}}</td>
 								<td>{{$produk->stock}}</td>
 								<td width="20px">
 										<a href="{{url('admin/produk', $produk->id)}}" class="btn btn-sm btn-info"><i class="fa fa-info"></i></a>
