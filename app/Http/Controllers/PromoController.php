@@ -47,6 +47,5 @@ class PromoController extends Controller{
 		$data['list_promo'] = Promo::where('nama', 'like', "%$nama%")->get();
 		$data['nama'] = $nama;
 		return view('promo.index', $data);
-		
 	}
 }

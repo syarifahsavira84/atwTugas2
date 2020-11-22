@@ -72,8 +72,6 @@ class ProdukController extends Controller{
 		$data['list_produk'] = Produk::where('nama', 'like', "%$nama%")->whereBetween('harga', [$harga_min, $harga_max])->get();
 		$data['nama'] = $nama;
 		$data['stock'] = request('stock');
-
-
 		return view('produk.index', $data);
 	}
 }

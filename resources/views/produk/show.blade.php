@@ -1,4 +1,3 @@
-
 @extends('layouts.admin2')
 
 @section('content')
@@ -27,5 +26,4 @@
 		</div>
 	</div>
 </div>
-
 @endsection

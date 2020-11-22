@@ -46,7 +46,6 @@ class PemasokController extends Controller{
 		$nama = request('nama');
 		$data['list_pemasok'] = Pemasok::where('nama', 'like', "%$nama%")->get();
 		$data['nama'] = $nama;
-		return view('pemasok.index', $data);
-		
+		return view('pemasok.index', $data);		
 	}
 }

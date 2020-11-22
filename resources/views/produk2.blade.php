@@ -36,7 +36,6 @@
 </head>
 
 <body>
-
     <!-- Start Main Top -->
     <div class="main-top">
         <div class="container-fluid">

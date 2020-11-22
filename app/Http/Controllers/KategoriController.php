@@ -46,7 +46,6 @@ class KategoriController extends Controller{
 		$nama = request('nama');
 		$data['list_kategori'] = Kategori::where('nama', 'like', "%$nama%")->get();
 		$data['nama'] = $nama;
-		return view('kategori.index', $data);
-		
+		return view('kategori.index', $data);	
 	}
 }

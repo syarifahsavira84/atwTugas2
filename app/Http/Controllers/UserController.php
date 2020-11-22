@@ -57,7 +57,6 @@ class UserController extends Controller{
 		$nama = request('nama');
 		$data['list_user'] = User::where('nama', 'like', "%$nama%")->get();
 		$data['nama'] = $nama;
-		return view('user.index', $data);
-		
+		return view('user.index', $data);	
 	}
 }
